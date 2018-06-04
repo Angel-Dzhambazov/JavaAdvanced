@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d15f1cb5-a53d-410b-84ef-1b6899369496" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaAdvanced/homeWorks/hw01_JavaSyntax/02. Java-Advanced-Java-Syntax-Homework (1).docx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaAdvanced/homeWorks/hw01_JavaSyntax/P11_GameOfNames.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaAdvanced/homeWorks/hw01_JavaSyntax/P12_VehiclePark.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaAdvanced/homeWorks/hw01_JavaSyntax/P13_BlurrFilter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaAdvanced/homeWorks/hw01_JavaSyntax/~$. Java-Advanced-Java-Syntax-Homework (1).docx" afterPath="" />
-    </list>
+    <list default="true" id="d15f1cb5-a53d-410b-84ef-1b6899369496" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -115,8 +109,8 @@
       <file leaf-file-name="P10_FirstOddOrEvenElements.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P10_FirstOddOrEvenElements.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="68">
+              <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -783,8 +777,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P10_FirstOddOrEvenElements.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="68">
+          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
           <folding />
         </state>
       </provider>
