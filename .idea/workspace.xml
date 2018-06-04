@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d15f1cb5-a53d-410b-84ef-1b6899369496" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TestHelloWorld.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P01_RectangleArea.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P02_TriangleArea.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P03_FormattingNumbers.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P04_CalculateExpression.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P05_FromDecimalToBaseSeven.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P06_FromBaseSevenToDecimal.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P07_OddAndEvenPairs.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homeWorks/hw02_MultidimensionalArrays/P01_FillMatrix.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/testPackage/HelloWorld02.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P08_HitTheTarget.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P09_CharacterMultiplier.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -99,7 +90,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="P07_OddAndEvenPairs.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="P07_OddAndEvenPairs.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P07_OddAndEvenPairs.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="663">
@@ -109,11 +100,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HelloWorld02.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/testPackage/HelloWorld02.java">
+      <file leaf-file-name="P08_HitTheTarget.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P08_HitTheTarget.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="51">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="P09_CharacterMultiplier.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P09_CharacterMultiplier.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -141,8 +142,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/TestHelloWorld.java" />
         <option value="$PROJECT_DIR$/src/testPackage/HelloWorld02.java" />
-        <option value="$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P08_HitTheTarget.java" />
-        <option value="$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P09_CharacterMultiplier.java" />
         <option value="$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P10_FirstOddOrEvenElements.java" />
         <option value="$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P11_GameOfNames.java" />
         <option value="$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P12_VehiclePark.java" />
@@ -154,6 +153,8 @@
         <option value="$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P05_FromDecimalToBaseSeven.java" />
         <option value="$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P06_FromBaseSevenToDecimal.java" />
         <option value="$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P07_OddAndEvenPairs.java" />
+        <option value="$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P08_HitTheTarget.java" />
+        <option value="$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P09_CharacterMultiplier.java" />
       </list>
     </option>
   </component>
@@ -644,14 +645,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P09_CharacterMultiplier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P10_FirstOddOrEvenElements.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -688,14 +681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P08_HitTheTarget.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="44" lean-forward="true" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
           <folding />
         </state>
       </provider>
@@ -760,6 +745,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P08_HitTheTarget.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P09_CharacterMultiplier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
           <folding />
         </state>
       </provider>
