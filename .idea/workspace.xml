@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d15f1cb5-a53d-410b-84ef-1b6899369496" name="Default" comment="" />
+    <list default="true" id="d15f1cb5-a53d-410b-84ef-1b6899369496" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/homeWorks/hw04_Sets_Maps/P02_SetsOfElements.java" afterPath="$PROJECT_DIR$/src/homeWorks/hw04_Sets_Maps/P02_SetsOfElements.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/homeWorks/hw04_Sets_Maps/P03_PeriodicTable.java" afterPath="$PROJECT_DIR$/src/homeWorks/hw04_Sets_Maps/P03_PeriodicTable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/homeWorks/hw04_Sets_Maps/P04_CountOfElements.java" afterPath="$PROJECT_DIR$/src/homeWorks/hw04_Sets_Maps/P04_CountOfElements.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/homeWorks/hw04_Sets_Maps/P05_Phonebook.java" afterPath="$PROJECT_DIR$/src/homeWorks/hw04_Sets_Maps/P05_Phonebook.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/homeWorks/hw04_Sets_Maps/P06_AMinerTask.java" afterPath="$PROJECT_DIR$/src/homeWorks/hw04_Sets_Maps/P06_AMinerTask.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/homeWorks/hw04_Sets_Maps/P07_FixEmails.java" afterPath="$PROJECT_DIR$/src/homeWorks/hw04_Sets_Maps/P07_FixEmails.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/homeWorks/hw04_Sets_Maps/P08_HandsOfCards.java" afterPath="$PROJECT_DIR$/src/homeWorks/hw04_Sets_Maps/P08_HandsOfCards.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/homeWorks/hw04_Sets_Maps/P09_UserLogs.java" afterPath="$PROJECT_DIR$/src/homeWorks/hw04_Sets_Maps/P09_UserLogs.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/homeWorks/hw04_Sets_Maps/P10_Population.java" afterPath="$PROJECT_DIR$/src/homeWorks/hw04_Sets_Maps/P10_Population.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,7 +30,7 @@
         <entry file="file://$PROJECT_DIR$/src/homeWorks/hw04_Sets_Maps/P01_UniqueUsernames.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -61,6 +71,8 @@
         <option value="$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P08_HitTheTarget.java" />
         <option value="$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P09_CharacterMultiplier.java" />
         <option value="$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P10_FirstOddOrEvenElements.java" />
+        <option value="$PROJECT_DIR$/src/homeWorks/hw05_Files_and_Streams/hw04_Sets_Maps/P01_UniqueUsernames.java" />
+        <option value="$PROJECT_DIR$/src/homeWorks/hw04_Sets_Maps/P01_UniqueUsernames.java" />
       </list>
     </option>
   </component>
@@ -171,6 +183,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="hw05_Files_and_Streams" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaAdvanced" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaAdvanced" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homeWorks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hw04_Sets_Maps" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -700,7 +734,7 @@
     <entry file="file://$PROJECT_DIR$/src/homeWorks/hw04_Sets_Maps/P01_UniqueUsernames.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -1,11 +1,6 @@
 
 package homeWorks.hw04_Sets_Maps;
 
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Scanner;
-import java.util.TreeMap;
-
 //public class P10_Population {
 //
 //    private static HashMap<String, HashMap<String, Integer>> countries;

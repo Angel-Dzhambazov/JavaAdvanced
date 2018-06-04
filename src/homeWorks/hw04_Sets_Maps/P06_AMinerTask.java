@@ -3,12 +3,7 @@ package homeWorks.hw04_Sets_Maps;
 
 
 
-import javafx.beans.binding.When;
-import jdk.nashorn.internal.ir.WhileNode;
-
-import java.math.BigInteger;
 import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
 import java.util.Scanner;
 
 public class P06_AMinerTask {

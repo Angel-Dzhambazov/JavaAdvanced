@@ -2,8 +2,6 @@
 package homeWorks.hw04_Sets_Maps;
 
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.TreeMap;
 
