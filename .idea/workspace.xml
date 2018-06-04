@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d15f1cb5-a53d-410b-84ef-1b6899369496" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P08_HitTheTarget.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P09_CharacterMultiplier.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaAdvanced/homeWorks/hw01_JavaSyntax/02. Java-Advanced-Java-Syntax-Homework (1).docx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaAdvanced/homeWorks/hw01_JavaSyntax/P11_GameOfNames.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaAdvanced/homeWorks/hw01_JavaSyntax/P12_VehiclePark.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaAdvanced/homeWorks/hw01_JavaSyntax/P13_BlurrFilter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaAdvanced/homeWorks/hw01_JavaSyntax/~$. Java-Advanced-Java-Syntax-Homework (1).docx" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,16 +22,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="P01_FillMatrix.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/homeWorks/hw02_MultidimensionalArrays/P01_FillMatrix.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="25" lean-forward="true" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="P01_RectangleArea.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P01_RectangleArea.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -110,11 +102,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="P09_CharacterMultiplier.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="P09_CharacterMultiplier.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P09_CharacterMultiplier.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+            <state relative-caret-position="187">
+              <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="P10_FirstOddOrEvenElements.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P10_FirstOddOrEvenElements.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -142,7 +144,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/TestHelloWorld.java" />
         <option value="$PROJECT_DIR$/src/testPackage/HelloWorld02.java" />
-        <option value="$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P10_FirstOddOrEvenElements.java" />
         <option value="$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P11_GameOfNames.java" />
         <option value="$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P12_VehiclePark.java" />
         <option value="$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P13_BlurrFilter.java" />
@@ -155,6 +156,7 @@
         <option value="$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P07_OddAndEvenPairs.java" />
         <option value="$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P08_HitTheTarget.java" />
         <option value="$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P09_CharacterMultiplier.java" />
+        <option value="$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P10_FirstOddOrEvenElements.java" />
       </list>
     </option>
   </component>
@@ -280,7 +282,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
-  <component name="RunManager" selected="Application.P05_FromDecimalToBaseSeven">
+  <component name="RunManager" selected="Application.P10_FirstOddOrEvenElements">
     <configuration default="false" name="TestHelloWorld" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="TestHelloWorld" />
@@ -344,6 +346,26 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="homeWorks.hw01_JavaSyntax.P05_FromDecimalToBaseSeven" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="JavaAdvanced" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="P10_FirstOddOrEvenElements" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="homeWorks.hw01_JavaSyntax.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="homeWorks.hw01_JavaSyntax.P10_FirstOddOrEvenElements" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -560,18 +582,20 @@
       <listeners />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.TestHelloWorld" />
       <item index="1" class="java.lang.String" itemvalue="Application.HelloWorld02" />
       <item index="2" class="java.lang.String" itemvalue="Application.P01_RectangleArea" />
       <item index="3" class="java.lang.String" itemvalue="Application.P05_FromDecimalToBaseSeven" />
+      <item index="4" class="java.lang.String" itemvalue="Application.P10_FirstOddOrEvenElements" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.P05_FromDecimalToBaseSeven" />
-        <item index="1" class="java.lang.String" itemvalue="Application.P01_RectangleArea" />
-        <item index="2" class="java.lang.String" itemvalue="Application.HelloWorld02" />
-        <item index="3" class="java.lang.String" itemvalue="Application.TestHelloWorld" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.P10_FirstOddOrEvenElements" />
+        <item index="1" class="java.lang.String" itemvalue="Application.P05_FromDecimalToBaseSeven" />
+        <item index="2" class="java.lang.String" itemvalue="Application.P01_RectangleArea" />
+        <item index="3" class="java.lang.String" itemvalue="Application.HelloWorld02" />
+        <item index="4" class="java.lang.String" itemvalue="Application.TestHelloWorld" />
       </list>
     </recent_temporary>
   </component>
@@ -642,14 +666,6 @@
             <element signature="e#114#115#0" expanded="true" />
             <element signature="e#168#169#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P10_FirstOddOrEvenElements.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -759,8 +775,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P09_CharacterMultiplier.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        <state relative-caret-position="187">
+          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/homeWorks/hw01_JavaSyntax/P10_FirstOddOrEvenElements.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
