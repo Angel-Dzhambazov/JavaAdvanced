@@ -1,4 +1,4 @@
-package homeWorks.hw02_MultidimensionalArrays;Arrays;
+package homeWorks.hw02_MultidimensionalArrays;
 
 import java.util.Scanner;
 
