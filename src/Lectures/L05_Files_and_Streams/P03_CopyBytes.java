@@ -4,7 +4,7 @@ package Lectures.L05_Files_and_Streams;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.StreamCorruptedException;
+
 
 public class P03_CopyBytes {
     private static String PATH = "G:\\github june 2018\\JavaAdvanced\\src\\Lectures\\L05_Files_and_Streams\\04. Java-Advanced-Files-and-Streams-Lab-Resources\\input.txt";
@@ -17,14 +17,15 @@ public class P03_CopyBytes {
         try (FileInputStream fileInputStream = new FileInputStream(PATH);
              FileOutputStream fileOutputStream = new FileOutputStream(OUTPUT_PATH)) {
             int oneByte = fileInputStream.read();
+            int asciiCodeSpace = 32;
+            int asciiCodeNewLine = 10;
             while (oneByte >= 0) {
-                String digits = String.valueOf(oneByte);
-
-                for (int i = 0; i < digits.length(); i++) {
-                    if (digits.charAt(i) == 32) {
-                        fileOutputStream.write(Integer.parseInt(String.valueOf(' ')));
-                    } else {
-                        fileOutputStream.write(digits.charAt(i));
+                if (asciiCodeNewLine == oneByte || asciiCodeSpace == oneByte) {
+                    fileOutputStream.write(oneByte);
+                } else {
+                    char[] characters = String.valueOf(oneByte).toCharArray();
+                    for (char character : characters) {
+                        fileOutputStream.write(character);
                     }
                 }
                 oneByte = fileInputStream.read();
