@@ -1,4 +1,4 @@
-package homeWorks.hw05_Files_and_Streams.Resources;
+package homeWorks.hw05_Files_and_Streams;
 
 
 import java.io.BufferedReader;
