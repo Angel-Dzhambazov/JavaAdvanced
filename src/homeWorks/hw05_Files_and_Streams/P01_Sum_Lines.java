@@ -10,6 +10,8 @@ public class P01_Sum_Lines {
     public static void main(String[] args) {
         final Path inPath = Paths.get("src\\homeWorks\\hw05_Files_and_Streams\\Resources\\input.txt");
 
+
+
         try (BufferedReader reader = Files.newBufferedReader(inPath)) {
             String line;
             while ((line = reader.readLine()) != null) {
