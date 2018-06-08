@@ -1,10 +1,9 @@
-package homeWorks.hw02_MultidimensionalArrays;;
+package homeWorks.hw02_MultidimensionalArrays;
 
 import java.util.Scanner;
 
-/**
- * Created by fluch on 4/22/2017.
- */
+
+
 public class P02_MatrixOfPalindromes {
     public static void main(String[] args) {
         char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();

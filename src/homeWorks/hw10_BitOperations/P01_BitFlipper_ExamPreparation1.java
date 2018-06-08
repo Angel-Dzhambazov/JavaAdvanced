@@ -1,4 +1,4 @@
-package Homeworks.HW10_BitOperations;
+package homeWorks.hw10_BitOperations;
 
 import java.io.BufferedReader;
 import java.io.IOException;

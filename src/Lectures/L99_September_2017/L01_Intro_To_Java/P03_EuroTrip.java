@@ -1,4 +1,4 @@
-package Lectures.L99_September_2017.L01_Intro;
+package Lectures.L99_September_2017.L01_Intro_To_Java;
 
 import java.math.BigDecimal;
 import java.util.Scanner;

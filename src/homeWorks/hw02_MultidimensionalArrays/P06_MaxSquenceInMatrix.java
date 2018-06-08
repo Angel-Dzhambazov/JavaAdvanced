@@ -1,4 +1,4 @@
-package homeWorks.hw02_MultidimensionalArrays;;
+package homeWorks.hw02_MultidimensionalArrays;
 
 import java.util.ArrayList;
 import java.util.Arrays;
