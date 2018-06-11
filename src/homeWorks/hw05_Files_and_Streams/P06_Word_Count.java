@@ -10,14 +10,13 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-
 public class P06_Word_Count {
-    public static void main(String[] args) {
+	public static void main(String[] args) {
         final Path inPath = Paths.get("src\\homeWorks\\hw05_Files_and_Streams\\Resources\\words.txt");
         final Path inputText = Paths.get("src\\homeWorks\\hw05_Files_and_Streams\\Resources\\text.txt");
 
         final Map<String, Integer> wordsCount = new HashMap<>();
-        final Map<String, String> inputTextToLowerCase = new HashMap<>();
+        final Map<String, Integer> inputTextToLowerCase = new HashMap<>();
 
 
         try (BufferedReader wordsToLookForInTheInput = Files.newBufferedReader(inPath);
@@ -26,23 +25,31 @@ public class P06_Word_Count {
             // palnim map s kliu4 vsqka duma ot inputTextaToLowerCase, a za stoinost vsqka duma v original, za po-lesna 4etimost
             String line;
             while ((line = reader.readLine()) != null) {
-                Arrays.stream(line.split("\\s+"))
+                Arrays.stream(line.split("([.,!?]?\\s+|[!?.])"))
                         .forEach(word -> {
-                            inputTextToLowerCase.put(word.toLowerCase(), word);
+
+                        	if (inputTextToLowerCase.containsKey(word.toLowerCase())) {
+                        		inputTextToLowerCase.put(word.toLowerCase(), inputTextToLowerCase.get(word.toLowerCase())+1);
+                        	} else {
+                        	   	inputTextToLowerCase.put(word.toLowerCase(), 1);
+                        	}
+
                         });
             }
-
             wordsToLookForInTheInput.lines()
-                    .forEach(str -> Arrays.stream(str.split("\\s+"))
-                            .forEach(word -> {
-                                word = word.toLowerCase();
-                                if (!wordsCount.containsKey(word)) {
-                                    wordsCount.put(word, 0);
-                                }
-                                if (inputTextToLowerCase.containsKey(word)) {
-                                    wordsCount.put(word, wordsCount.get(word) + 1);
-                                }
-                            }));
+            .forEach(str -> Arrays.stream(str.split("\\s+"))
+                    .forEach(word -> {
+                        word = word.toLowerCase();
+                        if (!wordsCount.containsKey(word)) {
+                            wordsCount.put(word, 0);
+                            System.out.println(wordsCount.size());
+                        }
+                        if (inputTextToLowerCase.containsKey(word)) {
+                            wordsCount.put(word, inputTextToLowerCase.get(word));
+                        }
+                    }));
+
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -53,4 +60,3 @@ public class P06_Word_Count {
                         wordsCount.get(kvp.getKey()), kvp.getValue()));
     }
 }
-
