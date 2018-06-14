@@ -22,7 +22,7 @@ public class P06_Word_Count {
         try (BufferedReader wordsToLookForInTheInput = Files.newBufferedReader(inPath);
              BufferedReader reader = Files.newBufferedReader(inputText)) {
 
-            // palnim map s kliu4 vsqka duma ot inputTextaToLowerCase, a za stoinost vsqka duma v original, za po-lesna 4etimost
+            // palnim map s kliu4 vsqka duma ot inputTextaToLowerCase, a za stoinost vsqka kolko pyti se sreshta v text-a
             String line;
             while ((line = reader.readLine()) != null) {
                 Arrays.stream(line.split("([.,!?]?\\s+|[!?.])"))
@@ -36,13 +36,15 @@ public class P06_Word_Count {
 
                         });
             }
+
+
+            // palnim map s tyrsenite dumi i tehniq broi v originalniq text
             wordsToLookForInTheInput.lines()
             .forEach(str -> Arrays.stream(str.split("\\s+"))
                     .forEach(word -> {
                         word = word.toLowerCase();
                         if (!wordsCount.containsKey(word)) {
                             wordsCount.put(word, 0);
-                            System.out.println(wordsCount.size());
                         }
                         if (inputTextToLowerCase.containsKey(word)) {
                             wordsCount.put(word, inputTextToLowerCase.get(word));
@@ -54,9 +56,10 @@ public class P06_Word_Count {
             e.printStackTrace();
         }
 
+        //sortirame dumite po broi sre6taniq v teksta (sort by value).
         wordsCount.entrySet().stream()
                 .sorted((w1, w2) -> w2.getValue().compareTo(w1.getValue()))
                 .forEach(kvp -> System.out.printf("%s - %d%n",
-                        wordsCount.get(kvp.getKey()), kvp.getValue()));
+                        kvp.getKey(), kvp.getValue()));
     }
 }
