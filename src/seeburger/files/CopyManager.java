@@ -1,7 +1,6 @@
 package seeburger.files;
 
 
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -17,38 +16,40 @@ public class CopyManager {
     private ArrayDeque<File> files = new ArrayDeque<>();
 
     public CopyManager(String source, String destination) {
-	this.source = new File(source);
-	this.destination = new File(destination);
+        this.source = new File(source);
+        this.destination = new File(destination);
     }
+    Object test = new Object();
 
     public boolean checkEmptyDirectory() {
 
-	boolean isDirectoryEmpty = source.listFiles().length <= 0;
+        boolean isDirectoryEmpty = source.listFiles().length <= 0;
 
-	return isDirectoryEmpty;
+        return isDirectoryEmpty;
     }
 
     public void copyFiles() throws IOException {
 
-	for (File file : source.listFiles()) {
-	    files.add(file);
-	}
+        for (File file : source.listFiles()) {
+            files.add(file);
+        }
 
-	File currentFile = null;
+        File currentFile = null;
 
-	Path sourcePath;
-	Path destinationPath;
+        Path sourcePath;
+        Path destinationPath;
 
-	while (!files.isEmpty()) {
+        while (!files.isEmpty()) {
 
-	    currentFile = files.pop();
+            currentFile = files.pop();
 
-	    sourcePath = Paths.get(currentFile.getPath());
-	    destinationPath = Paths.get(destination.getPath() + File.separator + currentFile.getName());
+            sourcePath = Paths.get(currentFile.getPath());
+            destinationPath = Paths.get(destination.getPath() + File.separator + currentFile.getName());
 
-	   Files.move(sourcePath, destinationPath , StandardCopyOption.ATOMIC_MOVE);
+            Files.move(sourcePath, destinationPath, StandardCopyOption.ATOMIC_MOVE);
 
-	}
+
+        }
     }
 
 }

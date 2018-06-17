@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+// this class (method) lists the name of the Single Folder in a specific location
 public class FolderMethod {
 
 	public static void main(String[] args) {
