@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    private static final String sourceFolder = "C:/Users/a.dzhambazov/Desktop/deklaracii";
-    private static final String destination = "C:/Users/a.dzhambazov/Desktop/deklaracii/premesten file";
+    private static final String sourceFolder = "C://Users//a.dzhambazov//Desktop//deklaracii//filesToMove";
+    private static final String destination = "C://Users//a.dzhambazov//Desktop//deklaracii//premesten file";
 
     public static void main(String[] args) throws IOException {
 
@@ -21,3 +21,12 @@ public class Main {
 	copyThread.shutdown();
     }
 }
+
+
+
+
+
+
+
+
+

@@ -23,6 +23,7 @@ public class P06_Word_Count {
              BufferedReader reader = Files.newBufferedReader(inputText)) {
 
             // palnim map s kliu4 vsqka duma ot inputTextaToLowerCase, a za stoinost vsqka kolko pyti se sreshta v text-a
+        	
             String line;
             while ((line = reader.readLine()) != null) {
                 Arrays.stream(line.split("([.,!?]?\\s+|[!?.])"))
@@ -36,8 +37,8 @@ public class P06_Word_Count {
 
                         });
             }
-
-
+                        
+            
             // palnim map s tyrsenite dumi i tehniq broi v originalniq text
             wordsToLookForInTheInput.lines()
             .forEach(str -> Arrays.stream(str.split("\\s+"))
