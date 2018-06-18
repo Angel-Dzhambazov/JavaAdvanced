@@ -2,6 +2,7 @@ package seeburger.files;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.CopyOption;
 import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -16,6 +17,7 @@ public class CopyManager {
 	private File source;
 	private File destination;
 	private ArrayDeque<File> files = new ArrayDeque<>();
+
 
 	public CopyManager(String source, String destination) {
 		this.source = new File(source);
@@ -50,13 +52,19 @@ public class CopyManager {
 
 			currentFile = files.pop();
 
+			//currentFile.length()
+			//currentFile.canWrite()
+
 			sourcePath = Paths.get(currentFile.getPath());
 			destinationPath = Paths.get(destination.getPath() + File.separator + currentFile.getName());
 
 			// Files.move(sourcePath, destinationPath , StandardCopyOption.ATOMIC_MOVE);
 
+
+			//overwrite
 			try {
 				Files.move(sourcePath, destinationPath);
+
 			} catch (FileAlreadyExistsException aee) {
 				currentFile.delete();
 			}
