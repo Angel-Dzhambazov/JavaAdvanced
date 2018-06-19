@@ -14,60 +14,68 @@ import java.util.ArrayDeque;
 
 public class CopyManager {
 
-	private File source;
-	private File destination;
-	private ArrayDeque<File> files = new ArrayDeque<>();
+    private File source;
+    private File destination;
+    private ArrayDeque<File> files = new ArrayDeque<>();
 
 
-	public CopyManager(String source, String destination) {
-		this.source = new File(source);
-		this.destination = new File(destination);
-	}
+    public CopyManager(String source, String destination) {
+        this.source = new File(source);
+        this.destination = new File(destination);
+    }
 
-	public boolean checkEmptyDirectory() {
-		return source.listFiles().length <= 0;
-	}
+    public boolean checkEmptyDirectory() {
+        return source.listFiles().length <= 0;
+    }
 
-	public void copyFiles() throws IOException {
+    public void copyFiles() throws IOException {
 
 		/*
-		 * this method used to add both files and directories to the Queue now it adds
+         * this method used to add both files and directories to the Queue now it adds
 		 * only files without directories!
 		 */
 
-		for (File file : source.listFiles()) {
+        for (File file : source.listFiles()) {
 //			tova palni samo failove!
 //			if (file.isFile()) {
 //				files.add(file);
 //			}
-			files.add(file);
-		}
+            files.add(file);
+        }
 
-		File currentFile = null;
+        File currentFile = null;
 
-		Path sourcePath;
-		Path destinationPath;
+        Path sourcePath;
+        Path destinationPath;
 
-		while (!files.isEmpty()) {
+        while (!files.isEmpty()) {
 
-			currentFile = files.pop();
+            currentFile = files.pop();
 
-			//currentFile.length()
-			//currentFile.canWrite()
+            long fileSize = currentFile.length();
+            fileSize /= (1024 * 1024);
 
-			sourcePath = Paths.get(currentFile.getPath());
-			destinationPath = Paths.get(destination.getPath() + File.separator + currentFile.getName());
+            //currentFile.length()
+            //currentFile.canWrite()
+            sourcePath = Paths.get(currentFile.getPath());
+            destinationPath = Paths.get(destination.getPath() + File.separator + currentFile.getName());
 
-			// Files.move(sourcePath, destinationPath , StandardCopyOption.ATOMIC_MOVE);
+            // Files.move(sourcePath, destinationPath , StandardCopyOption.ATOMIC_MOVE);
 
+            //we should overwrite, not ignore the move command
 
-			//overwrite
-			try {
-				Files.move(sourcePath, destinationPath);
+            if (fileSize < 200) {
+                try {
+                    Files.move(sourcePath, destinationPath);
+                } catch (FileAlreadyExistsException aee) {
+                    //Result of File.delete() is ignored => Zashto?
+                    currentFile.delete();
+                }
+            } else {
+                LargFileThread moveBigFile = new LargFileThread(currentFile, sourcePath, destinationPath);
+                moveBigFile.start();
+            }
 
-			} catch (FileAlreadyExistsException aee) {
-				currentFile.delete();
-			}
-		}
-	}
+        }
+    }
 }
