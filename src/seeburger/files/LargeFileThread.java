@@ -6,11 +6,13 @@ import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-class LargFileThread extends Thread {
+
+//thread factory? How to do it
+class LargeFileThread extends Thread {
     Path sourcePath;
     Path destinationPath;
 
-    LargFileThread(File file, Path sourcePath, Path destinationPath) throws IOException {
+    LargeFileThread(File file, Path sourcePath, Path destinationPath) throws IOException {
         this.sourcePath = sourcePath;
         this.destinationPath = destinationPath;
         this.moveLargeFile(file);

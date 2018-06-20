@@ -2,12 +2,10 @@ package seeburger.files;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.CopyOption;
 import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
 import java.util.ArrayDeque;
 
 //File obsolete? deprecated
@@ -49,33 +47,28 @@ public class CopyManager {
         Path destinationPath;
 
         while (!files.isEmpty()) {
-
             currentFile = files.pop();
-
             long fileSize = currentFile.length();
             fileSize /= (1024 * 1024);
-
             //currentFile.length()
             //currentFile.canWrite()
             sourcePath = Paths.get(currentFile.getPath());
             destinationPath = Paths.get(destination.getPath() + File.separator + currentFile.getName());
-
             // Files.move(sourcePath, destinationPath , StandardCopyOption.ATOMIC_MOVE);
-
             //we should overwrite, not ignore the move command
-
             if (fileSize < 200) {
                 try {
                     Files.move(sourcePath, destinationPath);
                 } catch (FileAlreadyExistsException aee) {
-                    //Result of File.delete() is ignored => Zashto?
+                    //Result of File.delete() is ignored => Zashto? (IntelliJ подчертава delete и казва че резултата е игнориран )
                     currentFile.delete();
                 }
             } else {
-                LargFileThread moveBigFile = new LargFileThread(currentFile, sourcePath, destinationPath);
+                //tuk ideqta e ako file-a e nad 200MB da se zapo4ne nova nishka, koqto da si go prehvarhq na zaden plan, oba4e az imam 4uvstvoto 4e dokato ne se prehvarli toq golemiq file nishto ne stava.
+                // Taka kato sazdavam instanciq na tozi obekt 
+                LargeFileThread moveBigFile = new LargeFileThread(currentFile, sourcePath, destinationPath);
                 moveBigFile.start();
             }
-
         }
     }
 }
