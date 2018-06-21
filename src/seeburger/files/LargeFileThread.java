@@ -7,15 +7,25 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 
+//stream - s precizen kontrol.
+// s files move
 //thread factory? How to do it
+//trqbva da izvikame super konstruktura
+
+//executive servise po-dobre ot thread factory
+
+
 class LargeFileThread extends Thread {
-    Path sourcePath;
-    Path destinationPath;
+    private Path sourcePath;
+    private Path destinationPath;
+    private File file;
 
     LargeFileThread(File file, Path sourcePath, Path destinationPath) throws IOException {
+        super();
         this.sourcePath = sourcePath;
         this.destinationPath = destinationPath;
-        this.moveLargeFile(file);
+        this.file = file;
+
     }
 
     private void moveLargeFile(File file) throws IOException {

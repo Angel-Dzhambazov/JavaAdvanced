@@ -58,16 +58,28 @@ public class CopyManager {
             //we should overwrite, not ignore the move command
             if (fileSize < 200) {
                 try {
+                    System.out.println("Starting moving of file: " + currentFile.getName());
                     Files.move(sourcePath, destinationPath);
+                    System.out.println("Finishing moving of file: " + currentFile.getName());
                 } catch (FileAlreadyExistsException aee) {
                     //Result of File.delete() is ignored => Zashto? (IntelliJ подчертава delete и казва че резултата е игнориран )
                     currentFile.delete();
                 }
             } else {
-                //tuk ideqta e ako file-a e nad 200MB da se zapo4ne nova nishka, koqto da si go prehvarhq na zaden plan, oba4e az imam 4uvstvoto 4e dokato ne se prehvarli toq golemiq file nishto ne stava.
-                // Taka kato sazdavam instanciq na tozi obekt 
+                //tuk ideqta e ako file-a e nad 200MB da se zapo4ne nova nishka, koqto da si go prehvarhq na zaden plan,
+                // oba4e az imam 4uvstvoto 4e dokato ne se prehvarli toq golemiq file nishto ne stava.
+                // Taka kato sazdavam instanciq na tozi obekt
+                System.out.println("Calling new single thread for a big file: " + currentFile.getName());
                 LargeFileThread moveBigFile = new LargeFileThread(currentFile, sourcePath, destinationPath);
+                System.out.println("Executing .start() command for file: "+ currentFile.getName());
+
                 moveBigFile.start();
+                try {
+                    moveBigFile.join();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                System.out.println("Finishing of .start() command");
             }
         }
     }
