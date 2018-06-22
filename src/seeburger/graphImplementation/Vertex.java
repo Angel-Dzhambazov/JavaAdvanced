@@ -3,10 +3,10 @@ package seeburger.graphImplementation;
 
 class Vertex {
     String name;
-    Neighbour adjList;
+    Neighbour svarzanKamNego;
 
     Vertex(String name, Neighbour neighbours) {
         this.name = name;
-        this.adjList = neighbours;
+        this.svarzanKamNego = neighbours;
     }
 }

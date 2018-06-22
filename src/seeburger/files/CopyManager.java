@@ -28,16 +28,8 @@ public class CopyManager {
 
     public void copyFiles() throws IOException {
 
-		/*
-         * this method used to add both files and directories to the Queue now it adds
-		 * only files without directories!
-		 */
-
         for (File file : source.listFiles()) {
-//			tova palni samo failove!
-//			if (file.isFile()) {
-//				files.add(file);
-//			}
+
             files.add(file);
         }
 
@@ -51,11 +43,12 @@ public class CopyManager {
             long fileSize = currentFile.length();
             fileSize /= (1024 * 1024);
             //currentFile.length()
-            //currentFile.canWrite()
+            //currentFile.canWrit()e
             sourcePath = Paths.get(currentFile.getPath());
             destinationPath = Paths.get(destination.getPath() + File.separator + currentFile.getName());
             // Files.move(sourcePath, destinationPath , StandardCopyOption.ATOMIC_MOVE);
-            //we should overwrite, not ignore the move command
+
+
             if (fileSize < 200) {
                 try {
                     System.out.println("Starting moving of file: " + currentFile.getName());
@@ -66,13 +59,10 @@ public class CopyManager {
                     currentFile.delete();
                 }
             } else {
-                //tuk ideqta e ako file-a e nad 200MB da se zapo4ne nova nishka, koqto da si go prehvarhq na zaden plan,
-                // oba4e az imam 4uvstvoto 4e dokato ne se prehvarli toq golemiq file nishto ne stava.
-                // Taka kato sazdavam instanciq na tozi obekt
-                System.out.println("Calling new single thread for a big file: " + currentFile.getName());
-                LargeFileThread moveBigFile = new LargeFileThread(currentFile, sourcePath, destinationPath);
-                System.out.println("Executing .start() command for file: "+ currentFile.getName());
 
+                LargeFileThread moveBigFile = new LargeFileThread(currentFile, sourcePath, destinationPath);
+
+                //System.out.println("prehvarlaneto ne trqbva da e zap4nalo!");
                 moveBigFile.start();
                 try {
                     moveBigFile.join();

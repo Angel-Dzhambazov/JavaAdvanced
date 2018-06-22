@@ -1,6 +1,5 @@
 package seeburger.graphImplementation;
 
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -13,5 +12,8 @@ class Main {
         String fileToUse = reader.readLine();
 
         Graph ourGraph = new Graph(fileToUse);
+        //ourGraph.dfs();
+        ourGraph.bfs();
+
     }
 }

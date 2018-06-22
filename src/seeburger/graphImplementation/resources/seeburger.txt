@@ -1,0 +1,15 @@
+undirected
+10
+Angel
+Yanko
+Georgi
+Vlado
+Tsvetoslav
+Ralitsa
+Daniela
+Natali
+Maria
+Viktoriya
+Angel Yanko Georgi Vlado Tsvetoslav
+Tsvetoslav Ralitsa Daniela Natali
+Maria Viktoriya

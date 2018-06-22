@@ -28,15 +28,19 @@ class LargeFileThread extends Thread {
 
     }
 
-    private void moveLargeFile(File file) throws IOException {
+    @Override
+    public void run() {
         try {
-            System.out.println("We are in the private method of the additional thread");
-            System.out.println("file name is: "  + file.getName());
+//            System.out.println("We are in the private method of the additional thread");
+//            System.out.println("file name is: "  + file.getName());
             Files.move(sourcePath, destinationPath);
             System.out.println("Moving of " + file.getName()+" completed");
         }catch (FileAlreadyExistsException aee) {
             //Result of File.delete() is ignored => Zashto?
             file.delete();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
+
 }
