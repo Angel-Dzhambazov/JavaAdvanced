@@ -14,9 +14,9 @@ public class Main {
 		// Thread copy = new Thread("nqkakav task");
 		// copy.start(); => polzva se tova
 		// copy.run(); => tova ne se polzva
-
 		// nishkata
 
+		
 		CopyProcessor copyThread = new CopyProcessor(copyManager);
 
 		// golqm file => nova nishka :).
@@ -30,5 +30,8 @@ public class Main {
 		scanner.nextLine();
 		copyThread.shutdown();
 		scanner.close();
+		
+		
+		
 	}
 }

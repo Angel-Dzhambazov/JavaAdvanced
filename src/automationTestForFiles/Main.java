@@ -2,7 +2,6 @@ package automationTestForFiles;
 
 import java.io.File;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -13,10 +12,11 @@ public class Main {
 
 	private static Map<Integer, Boolean> tests = new LinkedHashMap<Integer, Boolean>();
 	private static final String sourceFolderForTest = "C:\\Users\\a.dzhambazov\\Desktop\\filesTestFolder\\resource folder for test ";
-
 	private static final String destination = "C:\\Users\\a.dzhambazov\\Desktop\\filesTestFolder\\folder1";
 	private static final String finalDestination = "C:\\Users\\a.dzhambazov\\Desktop\\filesTestFolder\\folder2";
 
+	
+	
 	public static void main(String[] args) {
 
 		// Start of test 1 - loading X files into directory 1 and checking if these X
@@ -25,17 +25,19 @@ public class Main {
 
 		// Start of test 2 - loading X files and Y directories into directory 1 and
 		// checking if these X files are present in directory 2
-		createTest(2);
+		//createTest(2);
 
 		// Start of test 3 - loading Y directories into directory 1 and checking if
 		// these X files are present in directory 2
-		createTest(3);
+		//createTest(3);
 
 		// printing each test with its result - true if test is successful false if not
 		for (Map.Entry<Integer, Boolean> entry : tests.entrySet()) {
 			System.out.println("Test N:" + entry.getKey() + " finished as " + entry.getValue());
 		}
 	}
+	
+	
 
 	private static void createTest(Integer i) {
 		String sourceFolder = sourceFolderForTest + i;
