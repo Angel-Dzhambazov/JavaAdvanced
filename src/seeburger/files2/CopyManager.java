@@ -1,4 +1,4 @@
-package seeburger.files;
+package seeburger.files2;
 
 import java.io.File;
 import java.io.IOException;
@@ -49,9 +49,9 @@ public class CopyManager {
 
             if (fileSize < 200) {
                 try {
-                    System.out.println("Starting moving of file: " + currentFile.getName());
+                    //System.out.println("Starting moving of file: " + currentFile.getName());
                     Files.move(sourcePath, destinationPath);
-                    System.out.println("Finishing moving of file: " + currentFile.getName());
+                    //System.out.println("Finishing moving of file: " + currentFile.getName());
                 } catch (FileAlreadyExistsException aee) {
                     //Result of File.delete() is ignored => Zashto? (IntelliJ подчертава delete и казва че резултата е игнориран )
                     currentFile.delete();
@@ -66,7 +66,7 @@ public class CopyManager {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                System.out.println("Finishing of .start() command");
+                //System.out.println("Finishing of .start() command");
             }
         }
     }

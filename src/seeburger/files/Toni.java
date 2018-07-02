@@ -1,12 +1,11 @@
 package seeburger.files;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+
+
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
+
 import java.nio.file.StandardOpenOption;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -25,11 +24,8 @@ public class Toni {
 
 		try {
 			copyDirectory(firstFilePath, secondFilePath);
-
 			appendToFile(secondFilePath, STRING_TO_ADD);
-
 			searchFile(secondFilePath, STRING_TO_SEARCH);
-
 			boolean checkEqual = checkEqualFiles(firstFilePath, secondFilePath);
 			System.out.println(checkEqual);
 
@@ -51,22 +47,22 @@ public class Toni {
 		return Arrays.equals(bytes1, bytes2);
 	}
 
-	private static boolean checkEqualFilesOptimized(String firstFilePath, String secondFilePath) throws Exception {
-		File file1 = new File(firstFilePath);
-		File file2 = new File(secondFilePath);
-
-		if (file1.length() != file2.length())
-			return false;
-
-		boolean isEqual = false;
-		int step = 2048;
-
-		try (FileInputStream fis1 = new FileInputStream(file1); FileInputStream fis2 = new FileInputStream(file2);) {
-
-		}
-
-		return isEqual;
-	}
+//	private static boolean checkEqualFilesOptimized(String firstFilePath, String secondFilePath) throws Exception {
+//		File file1 = new File(firstFilePath);
+//		File file2 = new File(secondFilePath);
+//
+//		if (file1.length() != file2.length())
+//			return false;
+//
+//		boolean isEqual = false;
+//		int step = 2048;
+//
+//		try (FileInputStream fis1 = new FileInputStream(file1); FileInputStream fis2 = new FileInputStream(file2);) {
+//
+//		}
+//
+//		return isEqual;
+//	}
 
 
 	private static void searchFile(String dest, String stringToSearch) throws Exception {

@@ -19,7 +19,8 @@ public class FolderMethod {
 			File folder = new File(input);
 			File[] listOfFiles = folder.listFiles();
 			try {
-				List<String> listOfDirectories = new ArrayList();
+
+				List<String> listOfDirectories = new ArrayList<>();
 				for (File innerFolder : listOfFiles) {
 					if (innerFolder.isDirectory()) {
 						listOfDirectories.add(innerFolder.getName());
