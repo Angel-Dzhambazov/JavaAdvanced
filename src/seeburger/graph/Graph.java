@@ -12,7 +12,7 @@ public class Graph {
     private Set<Vertex> vertices;
     private Set<Edge> edges;
     private Map<Vertex, Set<Edge>> adjList;
-    //private Map<Vertex, List<Vertex>> adjList;
+
 
     public Graph() {
         vertices = new HashSet<>();

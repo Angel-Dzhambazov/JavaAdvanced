@@ -12,7 +12,9 @@ class Main {
         String fileToUse = reader.readLine();
 
         Graph ourGraph = new Graph(fileToUse);
-        //ourGraph.dfs();
+        ourGraph.dfs();
+        System.out.println("=================================================");
+        System.out.println("Here comes the Breadth First Search");
         ourGraph.bfs();
 
     }

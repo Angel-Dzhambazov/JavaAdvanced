@@ -28,8 +28,6 @@ public class P01_Intro {
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
 
-
-
             Pattern pattern = Pattern.compile("<.+?>");
             String currentLine = reader.readLine();
             while (!"END".equals(currentLine)){

@@ -22,7 +22,6 @@ public class CopyProcessor extends Thread {
                     e.printStackTrace();
                 }
             }
-
             try {
                 Thread.sleep(1000);
             } catch (Exception e) {
