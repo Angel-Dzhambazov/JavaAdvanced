@@ -1,25 +1,22 @@
 package automationTestForFiles;
 
+
+
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.Map;
 
 import seeburger.files2.CopyManager;
 import seeburger.files2.CopyProcessor;
-
-public class Main {
+public class TestCheckWith_FilenameAndSize {
 
 	private static Map<Integer, Boolean> tests = new LinkedHashMap<Integer, Boolean>();
 	private static final String sourceFolderForTest = "C:\\Users\\a.dzhambazov\\Desktop\\filesTestFolder\\resource folder for test ";
 	private static final String destination = "C:\\Users\\a.dzhambazov\\Desktop\\filesTestFolder\\folder1";
 	private static final String finalDestination = "C:\\Users\\a.dzhambazov\\Desktop\\filesTestFolder\\folder2";
+
+
 
 	public static void main(String[] args) {
 
@@ -29,17 +26,19 @@ public class Main {
 
 		// Start of test 2 - loading X files and Y directories into directory 1 and
 		// checking if these X files are present in directory 2
-		createTest(2);
+		//createTest(2);
 
 		// Start of test 3 - loading Y directories into directory 1 and checking if
 		// these X files are present in directory 2
-		createTest(3);
+		//createTest(3);
 
 		// printing each test with its result - true if test is successful false if not
 		for (Map.Entry<Integer, Boolean> entry : tests.entrySet()) {
 			System.out.println("Test N:" + entry.getKey() + " finished as " + entry.getValue());
 		}
 	}
+
+
 
 	private static void createTest(Integer i) {
 		String sourceFolder = sourceFolderForTest + i;
@@ -50,8 +49,8 @@ public class Main {
 
 		// creating a map holding all files with their size in order to compare them
 		// later
-		List<String> sourceFilesChecksum = new ArrayList<>();
-		fillListWithChecksum(sourceFilesChecksum, sourceFolder);
+		Map<String, Long> mapOfFilesAndSizeSourceFolder = new HashMap<String, Long>();
+		fillMapWithFilesAndSizeOfFiles(mapOfFilesAndSizeSourceFolder, sourceFolder);
 
 		// starting the thread moving the files from the test resource folder to the
 		// destination folder
@@ -65,80 +64,46 @@ public class Main {
 		}
 		copyThread.shutdown();
 
-		// filling a list with all the files' checkSums in the finalFolder
-		List<String> destinationFilesChecksum = new ArrayList<>();
-		fillListWithChecksum(destinationFilesChecksum, finalDestination);
+		// filling a map with all the files present in the finalFolder
+		Map<String, Long> mapOfFilesAndSizeDestinationFolder = new HashMap<String, Long>();
+		fillMapWithFilesAndSizeOfFiles(mapOfFilesAndSizeDestinationFolder, finalDestination);
 
 		// filling our resultMap with the number of the test and its true or false
 		// result
-		boolean result = checkForSuccessfulComplete(sourceFilesChecksum, destinationFilesChecksum);
+		boolean result = checkIfTestCompleted(mapOfFilesAndSizeSourceFolder, mapOfFilesAndSizeDestinationFolder);
 		tests.put(i, result);
 	}
 
-	private static boolean checkForSuccessfulComplete(List<String> listSource, List<String> listDestination) {
+	private static boolean checkIfTestCompleted(Map<String, Long> mapOfFilesAndSizeSourceFolder,
+			Map<String, Long> mapOfFilesAndSizeDestinationFolder) {
 
-		int mapCounter = listSource.size();
+		int mapCounter = mapOfFilesAndSizeSourceFolder.size();
 		int tempCounter = 0;
-		for (String string : listSource) {
-			if (listDestination.contains(string)) {
-				tempCounter++;
-			} else {
+		for (Map.Entry<String, Long> entry : mapOfFilesAndSizeSourceFolder.entrySet()) {
+			String currentSourceFileName = entry.getKey();
+			if (!mapOfFilesAndSizeDestinationFolder.containsKey(currentSourceFileName)) {
+
 				return false;
 			}
+			if (!entry.getValue().equals(mapOfFilesAndSizeDestinationFolder.get(currentSourceFileName))) {
+				return false;
+			}
+			tempCounter++;
 		}
-
 		if (mapCounter == tempCounter) {
 			return true;
 		}
 		return false;
 	}
 
-	// filling a list with all the checksum files
-	private static void fillListWithChecksum(List<String> list, String destination) {
+	private static void fillMapWithFilesAndSizeOfFiles(Map<String, Long> mapOfFilesAndSizeSourceFolder,
+			String destination) {
+
 		File source = new File(destination);
 		for (File file : source.listFiles()) {
-			// checking if it is file
-			// TODO implement if we can write/ read from the file. If we cannot, we shall
-			// skip moving the file.
 			if (!file.isDirectory()) {
-				try {
-					list.add(getCheckSumOfFile(file));
-				} catch (NoSuchAlgorithmException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				mapOfFilesAndSizeSourceFolder.put(file.getName(), file.length());
 			}
 		}
-	}
-
-	// getting checkSum of a file
-	private static String getCheckSumOfFile(File file) throws NoSuchAlgorithmException, IOException {
-
-		String filePath = file.getAbsolutePath();
-
-		MessageDigest md = MessageDigest.getInstance("SHA1");
-		FileInputStream fis = new FileInputStream(filePath);
-		byte[] dataBytes = new byte[1024];
-
-		int nread = 0;
-
-		while ((nread = fis.read(dataBytes)) != -1) {
-			md.update(dataBytes, 0, nread);
-		}
-
-		byte[] mdbytes = md.digest();
-
-		// convert the byte to hex format
-		StringBuffer sb = new StringBuffer("");
-		for (int i = 0; i < mdbytes.length; i++) {
-			sb.append(Integer.toString((mdbytes[i] & 0xff) + 0x100, 16).substring(1));
-		}
-
-		fis.close();
-
-		return sb.toString();
 	}
 }
