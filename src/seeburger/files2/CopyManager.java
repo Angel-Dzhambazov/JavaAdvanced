@@ -8,7 +8,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayDeque;
 
-//File obsolete? deprecated
+//
 
 public class CopyManager {
 
