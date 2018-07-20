@@ -15,6 +15,7 @@ public class P03_Series_Of_Letters {
 
         while (matcher.find()){
             System.out.print(matcher.group(1));
+            System.out.println("This is a github push test");
         }
     }
 
