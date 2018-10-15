@@ -15,7 +15,12 @@ class Main {
         ourGraph.dfs();
         System.out.println("=================================================");
         System.out.println("Here comes the Breadth First Search");
-        ourGraph.bfs();
+        //ourGraph.bfs();
+        
+        //tova shte mi trqbva za xml-a 
+        ourGraph.dfs();
+        
+        
 
     }
 }

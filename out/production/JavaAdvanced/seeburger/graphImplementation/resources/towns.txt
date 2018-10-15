@@ -1,0 +1,14 @@
+directed
+7
+Pazardzhik
+Plovdiv
+Sofia
+Varna
+Burgas
+Vidin
+Pleven
+Pazardzhik Plovdiv Burgas Sofia
+Sofia Pleven Pazardzhik Vidin Plovdiv
+Vidin Pleven
+Varna Burgas Vidin
+Pleven Varna

@@ -12,7 +12,9 @@ import java.util.List;
 class Graph {
     private Vertex[] adjList;
     private List<Vertex> listOfVerteces;
+
     private boolean directed;
+
     StringBuilder output = new StringBuilder();
 
     Graph(String fileName) {
@@ -131,6 +133,8 @@ class Graph {
         String toPrint = output.toString().replaceAll("(?m)^[ \t]*\r?\n", "");
         System.out.println(toPrint.substring(0, toPrint.length() - 6));
     }
+
+
 
     private void bfs(int start, boolean[] visited, Deque<Integer> queue) {
         visited[start] = true;
