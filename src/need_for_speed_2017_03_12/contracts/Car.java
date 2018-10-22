@@ -11,5 +11,5 @@ package need_for_speed_2017_03_12.contracts;
 
 public interface Car
 {
-
+    String toString();
 }
